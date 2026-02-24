@@ -1,0 +1,20 @@
+<section id="skills" class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Skills</h2>
+      <div class="title-underline"></div>
+    </div>
+
+    <div class="skills-grid">
+      <div
+        *ngFor="let skill of skills; let i = index"
+        class="skill-card"
+        [attr.data-aos]="'fade-up'"
+        [attr.data-aos-delay]="i * 20"
+      >
+        <div class="skill-icon" [innerHTML]="getSkillSvg(skill.name)"></div>
+        <div class="skill-name">{{ skill.name }}</div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,32 @@
+<section id="home" class="hero">
+  <div class="particles">
+    <div class="particle" *ngFor="let particle of particles" [style.left.%]="particle.x"
+      [style.animationDuration.s]="particle.duration" [style.animationDelay.s]="particle.delay">
+    </div>
+  </div>
+
+  <div class="hero-content">
+    <div class="profile-image">
+      <img src="assets/image8.png" alt="Indhujaa">
+    </div>
+
+    <h1 class="hero-title">
+      Hi, I'm <span class="highlight">Indhujaa</span>. 👋
+    </h1>
+
+    <!-- ✅ Angular data binding (no getElementById needed!) -->
+    <div class="typewriter">
+      {{ displayText }}<span class="cursor">_</span>
+    </div>
+
+    <a href="assets/resume.pdf" class="cta-button" download>
+      Download Resume
+    </a>
+  </div>
+
+  <div class="scroll-indicator">
+    <a href="#about">
+      <span class="material-icons">keyboard_arrow_down</span>
+    </a>
+  </div>
+</section>

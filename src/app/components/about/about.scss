@@ -1,0 +1,145 @@
+:host {
+  display: block;
+  background: #2d3250;
+  width: 100%;
+}
+
+.section {
+  background: #2d3250;
+  padding: 80px 0;
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 60px;
+
+  @media (max-width: 768px) {
+    padding: 0 20px;
+  }
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 20px;
+
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 12px;
+  }
+
+  .title-underline {
+    width: 60px;
+    height: 4px;
+    background: #00d4aa;
+    margin: 0 auto;
+    border-radius: 2px;
+  }
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  min-height: 50vh;
+
+  @media (max-width: 968px) {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.about-text {
+  h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #ffffff;
+  }
+
+  .intro {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    color: #ffffff;
+  }
+
+  .description {
+    margin-bottom: 25px;
+
+    p {
+      margin-bottom: 14px;
+      color: #a8b2d8;
+      line-height: 1.8;
+      font-size: 1rem;
+
+      strong {
+        color: #ffffff;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .additional-info {
+    margin-bottom: 25px;
+
+    p {
+      color: #a8b2d8;
+      line-height: 1.8;
+      font-size: 0.95rem;
+
+      .highlight-link {
+        color: #00d4aa;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.15);
+    margin-bottom: 20px;
+  }
+
+  .location {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #a8b2d8;
+    font-size: 1rem;
+
+    .material-icons {
+      color: #00d4aa;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.about-illustration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.illustration-wrapper {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .dev-svg {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 20px 40px rgba(0, 212, 170, 0.15));
+  }
+}

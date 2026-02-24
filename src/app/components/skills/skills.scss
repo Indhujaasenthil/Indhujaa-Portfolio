@@ -1,0 +1,131 @@
+:host {
+  display: block;
+  background: #2d3250;
+  width: 100%;
+}
+
+.section {
+  padding: 40px 0;
+  background: #2d3250;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+
+  @media (max-width: 768px) {
+    padding: 0 20px;
+  }
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 12px;
+  }
+
+  .title-underline {
+    width: 60px;
+    height: 4px;
+    background: #00d4aa;
+    margin: 0 auto;
+    border-radius: 2px;
+  }
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 20px;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 16px;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 14px;
+  }
+}
+
+.skill-card {
+  background: #3e4555;
+  border-radius: 16px;
+  padding: 20px 12px 0px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(0, 212, 170, 0.2);
+    border-color: #00d4aa;
+
+    .skill-icon svg {
+      transform: scale(1.15);
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 20px 10px 14px;
+    min-height: 120px;
+  }
+}
+
+.skill-icon {
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+
+  svg {
+    width: 56px;
+    height: 56px;
+    transition: transform 0.3s ease;
+    fill: white;
+  }
+
+  @media (max-width: 768px) {
+    width: 52px;
+    height: 52px;
+
+    svg {
+      width: 44px;
+      height: 44px;
+    }
+  }
+}
+
+.skill-name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  background: #39b175;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 0 0 20px 20px;
+  display: inline-block;
+  white-space: nowrap;
+  width: 126%;
+  box-sizing: border-box;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 0.75rem;
+    padding: 5px 8px;
+  }
+}

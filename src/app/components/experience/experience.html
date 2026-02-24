@@ -1,0 +1,47 @@
+<section id="experience" class="section">
+  <div class="container">
+
+    <div class="section-header">
+      <h2 class="section-title">Experience</h2>
+      <div class="title-underline"></div>
+    </div>
+
+    <div class="experience-grid">
+      <div
+        *ngFor="let exp of experiences; let i = index"
+        class="experience-card"
+        [attr.data-aos]="'fade-up'"
+        [attr.data-aos-delay]="i * 100"
+      >
+        <div class="card-header" [style.background]="exp.color">
+          <h3>{{ exp.company }}</h3>
+          <div class="company-logo" [style.background]="exp.color">
+            {{ exp.logo }}
+          </div>
+        </div>
+
+        <div class="card-body">
+          <h4 class="position">{{ exp.position }}</h4>
+          <p class="duration">{{ exp.duration }}</p>
+
+          <ul class="responsibilities">
+            <li *ngFor="let desc of exp.description">{{ desc }}</li>
+          </ul>
+
+          <div class="technologies">
+            <span *ngFor="let tech of exp.technologies" class="tech-badge">
+              {{ tech }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="linkedin-link" data-aos="fade-up">
+      <p>Further in-depth experience can be found on my
+        <a href="https://www.linkedin.com/in/anujraghuvanshi/" target="_blank" rel="noopener">LinkedIn</a>.
+      </p>
+    </div>
+
+  </div>
+</section>
